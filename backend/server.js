@@ -8,12 +8,12 @@ const router=require('./Router');
 mongoose.connect(process.env.URL).then(()=>{console.log("connected")})
 app.use(express.json());
 app.use(cors({
-    origin:["http://localhost:5173","https://64c35ae427ebb744aea5005d--soft-lolly-c4eed3.netlify.app/","https://64c35ce6c0ad7643f6b18b38--helpful-caramel-c8760e.netlify.app/"],
+    origin:["http://localhost:5173","https://64c35ae427ebb744aea5005d--soft-lolly-c4eed3.netlify.app/","https://majestic-gnome-a65b24.netlify.app/"],
     credentials:true,
 }));
 const server=require('http').Server(app);
 const io=require('socket.io')(server,{cors:{
-    origin:['http://localhost:5173',"https://64c35ae427ebb744aea5005d--soft-lolly-c4eed3.netlify.app/","https://64c35ce6c0ad7643f6b18b38--helpful-caramel-c8760e.netlify.app/"],credentials:true
+    origin:['http://localhost:5173',"https://majestic-gnome-a65b24.netlify.app/"],credentials:true
 }});
 app.use('/',router);
 const users=[];
