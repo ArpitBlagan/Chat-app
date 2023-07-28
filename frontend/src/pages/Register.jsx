@@ -8,7 +8,7 @@ const Register = () => {
     const [password,setP]=useState('');
     const handleRegister=async()=>{
         try{
-        const data=await axios.post('http://localhost:6020/register',{
+        const data=await axios.post('https://chatt-backend.onrender.com/register',{
             number,name,password
         });
         console.log(data);navigate('/')}

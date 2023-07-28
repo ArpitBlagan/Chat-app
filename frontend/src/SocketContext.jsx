@@ -7,7 +7,7 @@ const SocketContext = (props) => {
   const [num,setNN]=useState('');
   const [socket,setS]=useState();
   useEffect(()=>{
-    const ff=io('http://localhost:6020',{
+    const ff=io('https://chatt-backend.onrender.com',{
       query:{num}
     });setS(ff);
     return ()=>{

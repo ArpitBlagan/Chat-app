@@ -6,7 +6,7 @@ const Login = () => {
     const [number,setN]=useState('');
     const [password,setP]=useState('');
     const handleLogin=async()=>{
-        const data=await axios.post('http://localhost:6020/login',{
+        const data=await axios.post('https://chatt-backend.onrender.com/login',{
             number,password
         })
         console.log("Logged in",data);
